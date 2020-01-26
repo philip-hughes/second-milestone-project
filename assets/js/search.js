@@ -2,16 +2,14 @@
  * Created by Phugh on 26/01/2020.
  */
 const baseUrl = "https://api.themoviedb.org/3/";
-const searchMovieUrl = "search/movie?api_key=";
-const searchTvUrl = "search/tv?api_key=";
 const apiKey = "057284199444718faf6314cb69a872ab";
 
 const searchTerm = window.location.href.split('?').pop();
     if (searchTerm !== ""){
         console.log("inside search")
 
-        const movieUrl = "".concat(baseUrl,searchMovieUrl, apiKey, '&query=', searchTerm);
-        const tvUrl = "".concat(baseUrl,searchTvUrl, apiKey, '&query=', searchTerm);
+        const movieUrl = "".concat(baseUrl, "search/movie?api_key=", apiKey, '&query=', searchTerm);
+        const tvUrl = "".concat(baseUrl, "search/tv?api_key=", apiKey, '&query=', searchTerm);
 
         const movieData = getMovies(movieUrl);
         const tvData = getTv(tvUrl);
