@@ -1,0 +1,26 @@
+/***************Carousels****************/
+
+#now-playing-container, #coming-soon-container {
+    position: relative;
+}
+
+.carousel-title {
+    text-align: center;
+}
+
+.np-next, .np-prev, .cs-next, .cs-prev  {
+    position: absolute;
+    top: 50%;
+    color: white;
+    z-index: 1;
+}
+
+.cs-prev, .np-prev {
+    left: 50px;
+}
+.cs-next, .np-next  {
+    right: 50px;
+}
+.now-playing-item, .coming-soon-item {
+    display: inline-block;
+}
