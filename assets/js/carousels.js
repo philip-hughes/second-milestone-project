@@ -3,6 +3,7 @@
  */
 
 const baseUrl = "https://api.themoviedb.org/3/";
+const imageBaseUrl = "https://image.tmdb.org/t/p/w185";
 const apiKey = "057284199444718faf6314cb69a872ab";
 
 const nowPlayingUrl = "".concat(baseUrl, "movie/now_playing?api_key=",apiKey);
@@ -22,7 +23,7 @@ function writeNowPlaying(data){
         const results = data.results;
         const el = $('#now-playing-carousel');
         const items = results.map(result => {
-                return `<div class="now-playing-item"><img src="https://image.tmdb.org/t/p/w185${result.poster_path}"></div>`;
+                return `<div class="now-playing-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div>`;
             }
         );
         el.append(items);
@@ -41,7 +42,7 @@ function writeComingSoon(data){
         const results = data.results;
         const el = $('#coming-soon-carousel');
         const items = results.map(result => {
-                return `<div class="coming-soon-item"><img src="https://image.tmdb.org/t/p/w185${result.poster_path}"></div>`;
+                return `<div class="coming-soon-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div>`;
             }
         );
         el.append(items);
