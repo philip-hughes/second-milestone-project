@@ -9,14 +9,21 @@ const apiKey = "057284199444718faf6314cb69a872ab";
 const nowPlayingUrl = "".concat(baseUrl, "movie/now_playing?api_key=",apiKey);
 const nowPlayingData = getNowPlaying(nowPlayingUrl);
 
+const comingSoonUrl = "".concat(baseUrl, "movie/upcoming?api_key=", apiKey,"&language=en-US&page=1&region=GB");
+const comingSoonData = getComingSoon(comingSoonUrl);
+
 writeNowPlaying(nowPlayingData);
-writeComingSoon(nowPlayingData);
+writeComingSoon(comingSoonData);
 
 async function getNowPlaying(url){
     const data = await fetch(url);
     return data.json();
 };
 
+async function getComingSoon(url){
+    const data = await fetch(url);
+    return data.json();
+};
 
 function writeNowPlaying(data){
     data.then(data => {
