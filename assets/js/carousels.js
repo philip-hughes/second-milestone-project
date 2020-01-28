@@ -30,10 +30,11 @@ function writeNowPlaying(data){
         const results = data.results;
         const el = $('#now-playing-carousel');
         const items = results.map(result => {
-                return `<div class="now-playing-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div>`;
+            return `<a href="${"movie-details.html".concat("?",result.id)}"><div class="now-playing-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div></a>`;
             }
         );
         el.append(items);
+        console.log(items)
         el.slick({
             infinite: false,
             slidesToShow: 6,
@@ -49,7 +50,7 @@ function writeComingSoon(data){
         const results = data.results;
         const el = $('#coming-soon-carousel');
         const items = results.map(result => {
-                return `<div class="coming-soon-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div>`;
+                return `<a href="${"movie-details.html".concat("?",result.id)}"><div class="coming-soon-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div></a>`;
             }
         );
         el.append(items);
