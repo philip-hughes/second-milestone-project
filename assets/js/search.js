@@ -33,7 +33,7 @@ function writeMovieList(data){
         const results = data.results;
         const el = $('#movieList');
         const list = results.map(result => {
-                return `<li>${result.title}</li>`;
+                return `<li><a href="${"movie-details.html".concat("?",result.id)}">${result.title}</a></li>`;
             }
         )
         el.html(list);
