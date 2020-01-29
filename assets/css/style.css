@@ -24,3 +24,16 @@
 .now-playing-item, .coming-soon-item {
     display: inline-block;
 }
+
+/***************Search results****************/
+.search-item {
+    list-style: none;
+}
+
+.search-item-details {
+    display: inline-block;
+}
+
+.search-item-details a {
+    text-decoration: none;
+}
