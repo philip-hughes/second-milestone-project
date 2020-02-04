@@ -5,7 +5,8 @@
 import {apiKey, baseUrl} from './config.js';
 
 const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_key=", apiKey);
-
+const movieId = window.location.href.split('?').pop();
+console.log(movieId);
 
 $(document).ready(function() {
      $("i").click(function(){
@@ -22,7 +23,7 @@ $(document).ready(function() {
 async function postRating(value, sessionId){
     console.log(value);
     const id = await sessionId;
-    const postRatingUrl = baseUrl.concat("movie/", "590", "/rating?api_key=", apiKey, "&guest_session_id=", id );
+    const postRatingUrl = baseUrl.concat("movie/", movieId, "/rating?api_key=", apiKey, "&guest_session_id=", id );
     const ratingResponse = await fetch(postRatingUrl, {
         method: 'POST',
         headers: {
