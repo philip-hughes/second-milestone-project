@@ -1,8 +1,8 @@
 /**
  * Created by Phugh on 28/01/2020.
  */
-const baseUrl = "https://api.themoviedb.org/3/";
-const apiKey = "057284199444718faf6314cb69a872ab";
+
+import {apiKey, baseUrl} from './config.js';
 
 const movieId = window.location.href.split('?').pop();
 

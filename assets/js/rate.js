@@ -1,11 +1,10 @@
 /**
  * Created by Phugh on 29/01/2020.
  */
-/*const baseUrl = "https://api.themoviedb.org/3/";
-* const apiKey = "057284199444718faf6314cb69a872ab";*/
-const imageBaseUrl = "https://image.tmdb.org/t/p/w185";
 
-const guestSessionUrl = "https://api.themoviedb.org/3/".concat("/authentication/guest_session/new?api_key=", "057284199444718faf6314cb69a872ab");
+import {apiKey, baseUrl} from './config.js';
+
+const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_key=", apiKey);
 
 
 $(document).ready(function() {
@@ -17,17 +16,13 @@ $(document).ready(function() {
         const rating = $(".selected").attr("value");
         console.log(rating);
         postRating(rating, sessionId());
-
     });
-
-
 });
 
 async function postRating(value, sessionId){
     console.log(value);
     const id = await sessionId;
-    const postRatingUrl = "https://api.themoviedb.org/3/movie/581/rating?api_key=057284199444718faf6314cb69a872ab&guest_session_id=".concat(id);
-
+    const postRatingUrl = baseUrl.concat("movie/", "590", "/rating?api_key=", apiKey, "&guest_session_id=", id );
     const ratingResponse = await fetch(postRatingUrl, {
         method: 'POST',
         headers: {

@@ -2,9 +2,7 @@
  * Created by Phugh on 26/01/2020.
  */
 
-const baseUrl = "https://api.themoviedb.org/3/";
-const imageBaseUrl = "https://image.tmdb.org/t/p/w185";
-const apiKey = "057284199444718faf6314cb69a872ab";
+import {apiKey, baseUrl, imageBaseUrl, carouselImageSize} from './config.js';
 
 const nowPlayingUrl = "".concat(baseUrl, "movie/now_playing?api_key=",apiKey);
 const nowPlayingData = getNowPlaying(nowPlayingUrl);
@@ -30,7 +28,10 @@ function writeNowPlaying(data){
         const results = data.results;
         const el = $('#now-playing-carousel');
         const items = results.map(result => {
-            return `<a href="${"movie-details.html".concat("?",result.id)}"><div class="now-playing-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div></a>`;
+            return `<a href="${"movie-details.html".concat("?",result.id)}">
+                        <div class="now-playing-item"><img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
+                        </div>
+                    </a>`;
             }
         );
         el.append(items);
@@ -50,7 +51,11 @@ function writeComingSoon(data){
         const results = data.results;
         const el = $('#coming-soon-carousel');
         const items = results.map(result => {
-                return `<a href="${"movie-details.html".concat("?",result.id)}"><div class="coming-soon-item"><img src="${imageBaseUrl.concat(result.poster_path)}"></div></a>`;
+                return `<a href="${"movie-details.html".concat("?",result.id)}">
+                            <div class="coming-soon-item">
+                                <img src="${imageBaseUrl.concat(carouselImageSize, result.poster_path)}">
+                            </div>
+                        </a>`;
             }
         );
         el.append(items);

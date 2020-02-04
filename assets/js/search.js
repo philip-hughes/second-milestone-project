@@ -1,9 +1,8 @@
 /**
  * Created by Phugh on 26/01/2020.
  */
-const baseUrl = "https://api.themoviedb.org/3/";
-const imageBaseUrl = "https://image.tmdb.org/t/p/w92";
-const apiKey = "057284199444718faf6314cb69a872ab";
+
+import {apiKey, baseUrl, imageBaseUrl, searchResultsImageSize} from './config.js';
 
 const searchTerm = window.location.href.split('?').pop();
     if (searchTerm !== ""){
@@ -57,7 +56,7 @@ function writeMovieList(data){
                 const year = result.release_date.slice(0,4);
                     return `<li class="search-item">
                                 <a href="${"movie-details.html".concat("?",result.id)}">
-                                    <img src="${imageBaseUrl.concat(result.poster_path)}">
+                                    <img src="${imageBaseUrl.concat(searchResultsImageSize, result.poster_path)}">
                                 </a>
                                 <div class="search-item-details">
                                     <a href="${"movie-details.html".concat("?",result.id)}">
@@ -71,6 +70,4 @@ function writeMovieList(data){
         )
         el.html(list);
     })
-
-
 }
