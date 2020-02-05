@@ -1,28 +1,26 @@
 /**
  * Created by Phugh on 29/01/2020.
  */
-
 import {apiKey, baseUrl} from './config.js';
 
 const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_key=", apiKey);
 const movieId = window.location.href.split('?').pop();
-console.log(movieId);
 
 $(document).ready(function() {
      $("i").click(function(){
-         $("i").removeClass("selected")
+         $("i").removeClass("selected");
          $(this).addClass("selected");
         });
-    $("button").click(function(){
-        const rating = $(".selected").attr("value");
-        console.log(rating);
-        postRating(rating, sessionId());
-    });
+
+     $("button").click(function(){
+         submitRating();
+      });
 });
 
-async function postRating(value, sessionId){
-    console.log(value);
-    const id = await sessionId;
+async function submitRating(){
+    const rating = $(".selected").attr("value");
+   /* const ratingResponse = await postRating(rating, sessionId());*/
+    const id = await sessionId();
     const postRatingUrl = baseUrl.concat("movie/", movieId, "/rating?api_key=", apiKey, "&guest_session_id=", id );
     const ratingResponse = await fetch(postRatingUrl, {
         method: 'POST',
@@ -30,17 +28,25 @@ async function postRating(value, sessionId){
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"value" : value})
-        })
-    console.log(ratingResponse)
+        body: JSON.stringify({"value" : rating})
+    });
+    writeRatingResponse(ratingResponse);
 }
+
+async function writeRatingResponse(response){
+    const responseBody = await response.json();
+    if(responseBody.status_code === 12){
+       $("#rate").html("<p>You've already rated this movie</p>>")
+    }else if (responseBody.status_code === 1){
+       $("#rate").html("<p>Your rating has been submitted</p>>")
+    }
+};
 
 async function sessionId(){
     var sessionId = localStorage.getItem("guest_session_id");
     if(sessionId === null){
         await getSessionIdData().then(data => {
             sessionId = data.guest_session_id;
-            console.log(sessionId)
             localStorage.setItem("guest_session_id",sessionId );
         });
     }
@@ -50,4 +56,4 @@ async function sessionId(){
 async function getSessionIdData(){
     const sessionIdData = await fetch(guestSessionUrl);
     return sessionIdData.json();
-}
+};
