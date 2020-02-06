@@ -7,7 +7,7 @@ const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_ke
 const movieId = window.location.href.split('?').pop();
 
 async function submitRating(){
-    const rating = $(".selected").attr("value");
+    const rating = $(".score").attr("value");
    /* const ratingResponse = await postRating(rating, sessionId());*/
     const id = await sessionId();
     const postRatingUrl = baseUrl.concat("movie/", movieId, "/rating?api_key=", apiKey, "&guest_session_id=", id );
@@ -58,12 +58,12 @@ $("i").hover(
     });
 
 $("i").click(function(){
-    if(($(this).hasClass("selected"))){
-        $(this).removeClass("selected selected-yellow");
-        $(this).prev().addClass("selected");
+    if(($(this).hasClass("score"))){
+        $(this).removeClass("score selected-yellow");
+        $(this).prev().addClass("score");
     }else {
-        $("i").removeClass("selected selected-yellow");
-        $(this).addClass("selected selected-yellow");
+        $("i").removeClass("score selected-yellow");
+        $(this).addClass("score selected-yellow");
         $(this).prevAll().addClass("selected-yellow");
     }
 });
