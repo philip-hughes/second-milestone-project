@@ -6,17 +6,6 @@ import {apiKey, baseUrl} from './config.js';
 const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_key=", apiKey);
 const movieId = window.location.href.split('?').pop();
 
-$(document).ready(function() {
-     $("i").click(function(){
-         $("i").removeClass("selected");
-         $(this).addClass("selected");
-        });
-
-     $("button").click(function(){
-         submitRating();
-      });
-});
-
 async function submitRating(){
     const rating = $(".selected").attr("value");
    /* const ratingResponse = await postRating(rating, sessionId());*/
@@ -57,3 +46,28 @@ async function getSessionIdData(){
     const sessionIdData = await fetch(guestSessionUrl);
     return sessionIdData.json();
 };
+
+$("i").hover(
+    function(){
+        $(this).addClass("hover-yellow");
+        $(this).prevAll().addClass("hover-yellow");
+    },
+    function(){
+        $(this).removeClass("hover-yellow");
+        $(this).prevAll().removeClass("hover-yellow");
+    });
+
+$("i").click(function(){
+    if(($(this).hasClass("selected"))){
+        $(this).removeClass("selected selected-yellow");
+        $(this).prev().addClass("selected");
+    }else {
+        $("i").removeClass("selected selected-yellow");
+        $(this).addClass("selected selected-yellow");
+        $(this).prevAll().addClass("selected-yellow");
+    }
+});
+
+$("button").click(function(){
+    submitRating();
+});
