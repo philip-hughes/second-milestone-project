@@ -37,3 +37,12 @@
 .search-item-details a {
     text-decoration: none;
 }
+
+/***************Movie details****************/
+.grey {
+    color: grey;
+}
+
+.hover-yellow, .selected-yellow {
+    color: yellow;
+}
