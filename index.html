@@ -9,33 +9,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="module" src="assets/js/config.js"></script>
     <script src="assets/js/app.js"></script>
     <script type="module" src="assets/js/carousels.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
-
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Rave Reviews</title>
 </head>
 <body>
-<nav>
+<header class="row no-gutters">
+    <a class="col-4" href="index.html"><i class="fas fa-film home-icon" aria-hidden="true"></i></a>
     <input type="text" id="searchbox">
     <button type="submit" onclick="search()"></button>
-</nav>
-<div id="now-playing-container">
-    <h3 class="carousel-title">Now Playing</h3>
-    <i class="fas fa-chevron-left np-prev"></i>
-    <i class="fas fa-chevron-right np-next"></i>
-    <div id="now-playing-carousel"></div>
-</div>
-
+</header>
+<section>
+    <div id="now-playing-container">
+        <h3 class="carousel-title">Now Playing</h3>
+        <i class="fas fa-chevron-left np-prev"></i>
+        <i class="fas fa-chevron-right np-next"></i>
+        <div  id="now-playing-carousel"></div>
+    </div>
+</section>
+<section>
 <div id="coming-soon-container">
     <h3 class="carousel-title">Coming Soon</h3>
     <i class="fas fa-chevron-left cs-prev"></i>
     <i class="fas fa-chevron-right cs-next"></i>
     <div id="coming-soon-carousel"></div>
 </div>
+</section>
+
 </body>
 </html>
