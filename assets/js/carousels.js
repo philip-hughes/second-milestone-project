@@ -10,10 +10,12 @@ const comingSoonUrl = "".concat(baseUrl, "movie/upcoming?api_key=", apiKey,"&lan
 initCarousels();
 
 async function initCarousels(){
-    const nowPlayingData =  await getNowPlaying(nowPlayingUrl);
-    const comingSoonData =  await getComingSoon(comingSoonUrl);
-    writeNowPlaying(nowPlayingData.json());
-    writeComingSoon(comingSoonData.json());
+    const nowPlayingResponse =  await getNowPlaying(nowPlayingUrl);
+    const comingSoonResponse =  await getComingSoon(comingSoonUrl);
+    const nowPlayingBody = await nowPlayingResponse.json();
+    const comingSoonBody = await comingSoonResponse.json();
+    writeNowPlaying(nowPlayingBody);
+    writeComingSoon(comingSoonBody);
 }
 
 async function getNowPlaying(url){
@@ -27,11 +29,11 @@ async function getComingSoon(url){
 };
 
 function writeNowPlaying(data){
-    data.then(data => {
+
         const results = data.results;
         const el = $('#now-playing-carousel');
         const items = results.map(result => {
-            return `<a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
+                return `<a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
                         <div class="now-playing-item">
                             <img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
                         </div>
@@ -46,11 +48,10 @@ function writeNowPlaying(data){
             nextArrow: $('.np-next'),
             prevArrow: $('.np-prev')
         });
-    });
+
 }
 
 function writeComingSoon(data){
-    data.then(data => {
         const results = data.results;
         const el = $('#coming-soon-carousel');
         const items = results.map(result => {
@@ -69,6 +70,4 @@ function writeComingSoon(data){
             nextArrow: $('.cs-next'),
             prevArrow: $('.cs-prev')
         });
-    });
 };
-
