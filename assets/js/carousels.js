@@ -29,7 +29,6 @@ async function getComingSoon(url){
 };
 
 function writeNowPlaying(data){
-
         const results = data.results;
         const el = $('#now-playing-carousel');
         const items = results.map(result => {
@@ -41,6 +40,7 @@ function writeNowPlaying(data){
             }
         );
         el.append(items);
+    $(document).ready(function(){
         el.slick({
             infinite: false,
             slidesToShow: 5,
@@ -48,7 +48,7 @@ function writeNowPlaying(data){
             nextArrow: $('.np-next'),
             prevArrow: $('.np-prev')
         });
-
+    });
 }
 
 function writeComingSoon(data){
@@ -63,6 +63,7 @@ function writeComingSoon(data){
             }
         );
         el.append(items);
+    $(document).ready(function(){
         el.slick({
             infinite: false,
             slidesToShow: 5,
@@ -70,4 +71,5 @@ function writeComingSoon(data){
             nextArrow: $('.cs-next'),
             prevArrow: $('.cs-prev')
         });
+    });
 };
