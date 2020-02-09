@@ -56,6 +56,10 @@ header {
     text-align: center;
 }
 
+.carousel-item-link:focus {
+    outline: none;
+}
+
 .np-next, .np-prev, .cs-next, .cs-prev  {
     position: absolute;
     top: 50%;
