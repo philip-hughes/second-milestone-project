@@ -84,6 +84,11 @@ header {
 }
 
 /***************Search results****************/
+
+#list-container {
+    margin-top: 10px;
+}
+
 .search-item {
     list-style: none;
 }
