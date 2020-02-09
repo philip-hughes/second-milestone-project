@@ -29,6 +29,9 @@ header {
     margin-top: 15px;
 }
 
+::placeholder {
+    padding-left: 15px;
+}
 
 /***************Carousels****************/
 
