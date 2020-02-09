@@ -52,6 +52,12 @@ header {
     top: 50%;
     color: white;
     z-index: 1;
+    font-size: 30px;
+}
+
+.np-next:hover, .np-prev:hover, .cs-next:hover, .cs-prev:hover  {
+    color: yellow;
+    cursor: pointer;
 }
 
 .cs-prev, .np-prev {
