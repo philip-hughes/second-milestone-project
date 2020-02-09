@@ -6,6 +6,10 @@ header {
     border-bottom: solid 1px #c7a500;
 }
 
+#home-link {
+    text-decoration: none;
+}
+
 .home-icon {
     font-size: 30px;
     padding-left: 15px;
