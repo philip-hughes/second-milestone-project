@@ -20,9 +20,12 @@
 </head>
 <body>
 <header class="row no-gutters">
-    <a class="col-4" href="index.html"><i class="fas fa-film home-icon" aria-hidden="true"></i></a>
-    <input type="text" id="searchbox">
-    <button type="submit" onclick="search()"></button>
+    <a class="col-2" href="index.html">
+        <i class="fas fa-film home-icon" aria-hidden="true"></i>
+        <span id="title">Rave<br/>Reviews</span>
+    </a>
+    <input type="text" id="searchbox" class="col-8" placeholder="Search Movies">
+    <button class="fas fa-search" id="search-button" type="submit" onclick="search()"></button>
 </header>
 <div>
     <ul id="movieList"></ul>
