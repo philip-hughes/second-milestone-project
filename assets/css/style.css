@@ -2,7 +2,7 @@
 header {
     height: 60px;
     color: #fff;
-    background-color: #000;
+    background-color: #233870;
     border-bottom: solid 1px #c7a500;
 }
 
@@ -13,7 +13,7 @@ header {
 .home-icon {
     font-size: 30px;
     padding-left: 15px;
-    color: yellow;
+    color: white;
     /* color: #ffd600;*/
 }
 
@@ -86,11 +86,18 @@ header {
 /***************Search results****************/
 
 #list-container {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .search-item {
-    list-style: none;
+     list-style: none;
+     margin-bottom: 10px;
+ }
+
+.search-item img {
+   min-height: 147px;
+   min-width: 98px;
+
 }
 
 .search-item-details {
@@ -101,6 +108,10 @@ header {
     text-decoration: none;
 }
 
+.rating i {
+    color: gold;
+}
+
 /***************Movie details****************/
 .grey {
     color: grey;
@@ -108,4 +119,29 @@ header {
 
 .hover-yellow, .selected-yellow {
     color: yellow;
+}
+
+/***************Footer****************/
+
+footer {
+    height: 120px;
+    color: #fff;
+    background-color: #233870;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+footer h2 {
+    padding-top: 5px;
+}
+
+footer a:hover {
+    color: #fff;
+}
+#media-links {
+    text-align: center;
 }
