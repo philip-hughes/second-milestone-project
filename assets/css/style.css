@@ -28,6 +28,11 @@ header {
     padding-top: 8px;
 }
 
+
+#searchbox:focus {
+   outline: none;
+}
+
 #searchbox, #search-button {
     height: 30px;
     margin-top: 15px;
