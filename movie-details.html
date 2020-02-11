@@ -28,15 +28,28 @@
     <input type="text" id="searchbox" class="col-8" placeholder="Search Movies">
     <button class="fas fa-search" id="search-button" type="submit" onclick="search()"></button>
 </header>
-<div id="movie-details"></div>
-<div id="rate">
-    <i class="fas fa-star grey" value="2"></i>
-    <i class="fas fa-star grey" value="4"></i>
-    <i class="fas fa-star grey" value="6"></i>
-    <i class="fas fa-star grey" value="8"></i>
-    <i class="fas fa-star grey" value="10"></i>
-    <button type="button">Submit</button>
-</div>
+<section class="offset-2 col-8 row" id="movie-wrapper">
+    <div class="col-4" id="poster"></div>
+        <div class="col-8" id="movie-details">
+            <div id="movie-title"></div>
+            <div id="movie-overview"></div>
+            <div id="movie-credits">
+                <span id="director">Director: </span>
+                <span id="cast">Cast: </span>
+            </div>
+            <div id="movie-rating"></div>
+    </div>
+    <div class="col-12" id="rating-container">
+        <div id="rate">
+            <i class="fas fa-star grey" value="2"></i>
+            <i class="fas fa-star grey" value="4"></i>
+            <i class="fas fa-star grey" value="6"></i>
+            <i class="fas fa-star grey" value="8"></i>
+            <i class="fas fa-star grey" value="10"></i>
+            <button type="button">Submit</button>
+        </div>
+    </div>
+</section>
 <footer>
     <div class="offset-4 col-4" id="media-links">
         <h2>Follow Us</h2>
