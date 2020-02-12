@@ -22,12 +22,14 @@
 </head>
 <body>
 <header class="row no-gutters">
-    <a id="home-link" class="col-2" href="index.html">
+    <a class="col-5 col-sm-4 col-md-3 col-lg-2" href="index.html">
         <i class="fas fa-film home-icon" aria-hidden="true"></i>
         <span id="title">Rave<br/>Reviews</span>
     </a>
-    <input type="text" id="searchbox" class="col-8" placeholder="Search Movies">
-    <button class="fas fa-search" id="search-button" type="submit" onclick="search()"></button>
+    <div class="col-6 col-md-8" id="search-container">
+        <input  type="text" id="searchbox"  placeholder="Search Movies">
+        <button class="fas fa-search" id="search-button" type="submit" onclick="search()"></button>
+    </div>
 </header>
 <section>
     <div id="now-playing-container">
