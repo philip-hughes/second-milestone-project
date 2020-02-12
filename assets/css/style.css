@@ -11,23 +11,27 @@ header {
 }
 
 .home-icon {
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 15px;
     color: white;
     /* color: #ffd600;*/
 }
 
+
 #title {
     display: inline-block;
     color: yellow;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 900;
     line-height: 20px;
     padding-left: 15px;
     padding-top: 8px;
 }
 
+#search-container {
+    position: relative;
+}
 
 #searchbox:focus {
    outline: none;
@@ -36,7 +40,19 @@ header {
 #searchbox, #search-button {
     height: 30px;
     margin-top: 15px;
+    background-color: white;
+    border: none;
 }
+
+#searchbox {
+    width: 100%;
+}
+
+#search-button {
+    position: absolute;
+    right: 0;
+}
+
 
 ::placeholder {
     padding-left: 15px;
@@ -113,6 +129,20 @@ header {
 }
 
 /***************Movie details****************/
+
+#movie-wrapper {
+    padding-top: 42px;
+}
+
+#rating-container {
+    background-color: #534bae;
+    height: 80px;
+}
+
+#rate {
+    display: inline-block;
+}
+
 .grey {
     color: grey;
 }
@@ -127,6 +157,7 @@ footer {
     height: 120px;
     color: #fff;
     background-color: #233870;
+    margin-top: 40px;
 }
 
 footer a {
