@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Coda+Caption:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700');
+
 /***************Header****************/
 header {
     height: 60px;
@@ -22,8 +25,9 @@ header {
     display: inline-block;
     color: #fbd032;
     text-align: center;
+    font-family: 'Coda Caption', sans-serif;
     font-size: 25px;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 20px;
     padding-left: 15px;
     padding-top: 8px;
@@ -78,6 +82,7 @@ header {
 
 .carousel-title {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .carousel-item-link {
@@ -136,6 +141,7 @@ header {
 .search-item {
      list-style: none;
      margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
  }
 
 .search-item img {
@@ -160,7 +166,10 @@ header {
 
 #movie-wrapper {
     padding-top: 42px;
+    font-family: 'Montserrat', sans-serif;
 }
+
+
 
 #rating-container {
     background-color: #534bae;
@@ -186,6 +195,7 @@ footer {
     color: #fff;
     background-color: #233870;
     margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 footer a {
