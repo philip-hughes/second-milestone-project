@@ -88,6 +88,10 @@ header {
     outline: none;
 }
 
+.now-playing-item:hover, .coming-soon-item:hover {
+    opacity: 0.9;
+}
+
 .arrow-box {
     border: .5px solid white;
     border-radius: 2px;
