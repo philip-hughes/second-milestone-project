@@ -20,7 +20,7 @@ header {
 
 #title {
     display: inline-block;
-    color: yellow;
+    color: #fbd032;
     text-align: center;
     font-size: 25px;
     font-weight: 900;
@@ -88,12 +88,30 @@ header {
     outline: none;
 }
 
-.np-next, .np-prev, .cs-next, .cs-prev  {
+.arrow-box {
+    border: .5px solid white;
+    border-radius: 2px;
     position: absolute;
     top: 50%;
-    color: white;
+    width: 36px;
+    height: 45px ;
+    opacity: 3;
     z-index: 1;
-    font-size: 30px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+}
+
+.arrow-box-left {
+    left: 50px;
+}
+.arrow-box-right{
+    right: 50px;
+}
+
+.np-next, .np-prev, .cs-next, .cs-prev  {
+ line-height: 45px;
 }
 
 .np-next:hover, .np-prev:hover, .cs-next:hover, .cs-prev:hover  {
@@ -101,12 +119,6 @@ header {
     cursor: pointer;
 }
 
-.cs-prev, .np-prev {
-    left: 50px;
-}
-.cs-next, .np-next  {
-    right: 50px;
-}
 .now-playing-item, .coming-soon-item {
     display: inline-block;
 }
