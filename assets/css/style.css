@@ -23,7 +23,7 @@ header {
 
 #title {
     display: inline-block;
-    color: #fbd032;
+    color: #adb5bd;
     text-align: center;
     font-family: 'Coda Caption', sans-serif;
     font-size: 25px;
@@ -48,7 +48,7 @@ header {
     position: relative;
 }
 
-#searchbox:focus {
+#searchbox:focus, #search-button:focus {
    outline: none;
 }
 
