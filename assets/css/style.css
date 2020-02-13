@@ -6,6 +6,7 @@ header {
     height: 60px;
     color: #fff;
     background-color: #233870;
+    /*70232a*/
     border-bottom: solid 1px #c7a500;
 }
 
@@ -23,7 +24,7 @@ header {
 
 #title {
     display: inline-block;
-    color: #adb5bd;
+    color: #adb5bd; /*bdadad*/
     text-align: center;
     font-family: 'Coda Caption', sans-serif;
     font-size: 25px;
@@ -57,10 +58,12 @@ header {
     margin-top: 15px;
     background-color: white;
     border: none;
+    box-shadow: none;
 }
 
 #searchbox {
     width: 100%;
+    padding-left: 15px;
 }
 
 #search-button {
@@ -70,9 +73,7 @@ header {
 }
 
 
-::placeholder {
-    padding-left: 15px;
-}
+
 
 /***************Carousels****************/
 
