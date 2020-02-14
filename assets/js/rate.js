@@ -25,9 +25,9 @@ async function submitRating(){
 async function writeRatingResponse(response){
     const responseBody = await response.json();
     if(responseBody.status_code === 12){
-       $("#rate").html("<p>You've already rated this movie</p>>")
+       $("#rating-container").html("<p>You've already rated this movie</p>")
     }else if (responseBody.status_code === 1){
-       $("#rate").html("<p>Your rating has been submitted</p>>")
+       $("#rating-container").html("<p>Your rating has been submitted</p>")
     }
 };
 
