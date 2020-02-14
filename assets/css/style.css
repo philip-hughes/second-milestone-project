@@ -58,7 +58,7 @@ header {
     margin-top: 15px;
     background-color: white;
     border: none;
-    box-shadow: none;
+
 }
 
 #searchbox {
@@ -173,12 +173,38 @@ header {
 
 
 #rating-container {
+    position: relative;
     background-color: #534bae;
     height: 80px;
+    margin-top: 10px;
+}
+
+#rating-container span{
+    position: absolute;
+    top: 26px;
+    right: 250px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 #rate {
-    display: inline-block;
+    position: absolute;
+    top: 27px;
+    right: 20px;
+}
+
+#rate i {
+    font-size: 20px;
+}
+
+#rate button {
+    border: none;
+    background-color: #e4e70c;
+    height: 30px;
+    margin-left: 10px;
 }
 
 .grey {
@@ -186,7 +212,7 @@ header {
 }
 
 .hover-yellow, .selected-yellow {
-    color: yellow;
+    color: #e4e70c;
 }
 
 /***************Footer****************/
