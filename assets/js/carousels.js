@@ -42,7 +42,7 @@ function writeNowPlaying(data){
         el.append(items);
     $(document).ready(function(){
         el.slick({
-            infinite: false,
+            infinite: true,
             slidesToShow: 5,
             slidesToScroll: 3,
             nextArrow: $('.np-next'),
@@ -52,8 +52,7 @@ function writeNowPlaying(data){
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 4,
-                        slidesToScroll: 2,
-                        infinite: false
+                        slidesToScroll: 2
                     }
                 },
                 {
@@ -96,7 +95,7 @@ function writeComingSoon(data){
         el.append(items);
     $(document).ready(function(){
         el.slick({
-            infinite: false,
+            infinite: true,
             slidesToShow: 5,
             slidesToScroll: 3,
             nextArrow: $('.cs-next'),
