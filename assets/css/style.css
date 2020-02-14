@@ -5,7 +5,7 @@
 header {
     height: 60px;
     color: #fff;
-    background-color: #131307;
+    background-color: #e3b91e;
     /*70232a or efef0e or 233870 or #131307*/
 
 }
@@ -172,7 +172,9 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
-
+#director span, #cast span {
+    font-weight: bold;
+}
 
 #rating-container {
     position: relative;
@@ -234,9 +236,13 @@ header {
 /***************Footer****************/
 
 footer {
+    /*  position: fixed;
+      width: 100%;
+      bottom: 0;
+      z-index: 2;*/
     height: 120px;
     color: #fff;
-    background-color: #131307;
+    background-color: #e3b91e;
   /*  background-color: #efef0e; */
     font-family: 'Montserrat', sans-serif;
 }
