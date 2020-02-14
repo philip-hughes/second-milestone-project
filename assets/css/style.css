@@ -180,6 +180,7 @@ header {
     background-color: #393651;
     height: 80px;
     margin-top: 10px;
+    margin-bottom: 40px;
     text-align: center;
 
 }
@@ -237,7 +238,6 @@ footer {
     color: #fff;
     background-color: #131307;
   /*  background-color: #efef0e; */
-    margin-top: 40px;
     font-family: 'Montserrat', sans-serif;
 }
 
