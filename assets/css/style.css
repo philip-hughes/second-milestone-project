@@ -5,9 +5,9 @@
 header {
     height: 60px;
     color: #fff;
-    background-color: #233870;
-    /*70232a*/
-    border-bottom: solid 1px #c7a500;
+    background-color: #131307;
+    /*70232a or efef0e or 233870 or #131307*/
+
 }
 
 #home-link {
@@ -24,7 +24,7 @@ header {
 
 #title {
     display: inline-block;
-    color: #adb5bd; /*bdadad*/
+    color: #cad2db; /*bdadad*/
     text-align: center;
     font-family: 'Coda Caption', sans-serif;
     font-size: 25px;
@@ -58,7 +58,7 @@ header {
     margin-top: 15px;
     background-color: white;
     border: none;
-
+    border-radius: 2px;
 }
 
 #searchbox {
@@ -79,11 +79,13 @@ header {
 
 #now-playing-container, #coming-soon-container {
     position: relative;
+    background-color: #0d0101;
 }
 
 .carousel-title {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    color: #cad2db;
 }
 
 .carousel-item-link {
@@ -166,7 +168,7 @@ header {
 /***************Movie details****************/
 
 #movie-wrapper {
-    padding-top: 42px;
+    margin-top: 42px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -174,9 +176,12 @@ header {
 
 #rating-container {
     position: relative;
-    background-color: #534bae;
+    /*background-color: #534bae;*/
+    background-color: #393651;
     height: 80px;
     margin-top: 10px;
+    text-align: center;
+
 }
 
 #rating-container span{
@@ -187,7 +192,15 @@ header {
     font-size: 20px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
+}
 
+#rating-container p{
+
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #rate {
@@ -195,6 +208,8 @@ header {
     top: 27px;
     right: 20px;
 }
+
+
 
 #rate i {
     font-size: 20px;
@@ -220,7 +235,8 @@ header {
 footer {
     height: 120px;
     color: #fff;
-    background-color: #233870;
+    background-color: #131307;
+  /*  background-color: #efef0e; */
     margin-top: 40px;
     font-family: 'Montserrat', sans-serif;
 }
