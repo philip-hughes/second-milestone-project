@@ -24,7 +24,7 @@ header {
 
 #title {
     display: inline-block;
-    color: #cad2db; /*bdadad*/
+    color: #3f051a; /*bdadad*/
     text-align: center;
     font-family: 'Coda Caption', sans-serif;
     font-size: 25px;
@@ -32,17 +32,6 @@ header {
     line-height: 20px;
     padding-left: 15px;
     padding-top: 8px;
-}
-
-@media(max-width:410px) {
-    .home-icon {
-        font-size: 25px;
-        padding-left: 15px;
-    }
-    #title {
-        font-size: 20px;
-        padding-left: 5px;
-    }
 }
 
 #search-container {
@@ -62,18 +51,26 @@ header {
 }
 
 #searchbox {
-    width: 100%;
+    width: 90%;
     padding-left: 15px;
 }
 
 #search-button {
     position: absolute;
-    right: 0;
+    right: 10%;
     top: 0;
 }
 
-
-
+@media(max-width:410px) {
+    .home-icon {
+        font-size: 25px;
+        padding-left: 15px;
+    }
+    #title {
+        font-size: 20px;
+        padding-left: 5px;
+    }
+}
 
 /***************Carousels****************/
 
