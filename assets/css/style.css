@@ -88,12 +88,13 @@ header {
     color: #cad2db;
 }
 
-.carousel-item-link {
-    text-align: center;
-}
 
 .carousel-item-link:focus {
     outline: none;
+}
+
+.now-playing-item, .coming-soon-item {
+    text-align: center;
 }
 
 .now-playing-item:hover, .coming-soon-item:hover {

@@ -32,11 +32,12 @@ function writeNowPlaying(data){
         const results = data.results;
         const el = $('#now-playing-carousel');
         const items = results.map(result => {
-                return `<a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
-                        <div class="now-playing-item">
-                            <img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
+                return `<div class="now-playing-item">
+                            <a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
+                                <img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
+                             </a>                            
                         </div>
-                    </a>`;
+                    `;
             }
         );
         el.append(items);
@@ -85,11 +86,12 @@ function writeComingSoon(data){
         const results = data.results;
         const el = $('#coming-soon-carousel');
         const items = results.map(result => {
-                return `<a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
-                            <div class="coming-soon-item">
-                                <img src="${imageBaseUrl.concat(carouselImageSize, result.poster_path)}">
-                            </div>
-                        </a>`;
+                return `<div class="coming-soon-item">
+                            <a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
+                                <img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
+                             </a>                            
+                        </div>
+                    `;
             }
         );
         el.append(items);
