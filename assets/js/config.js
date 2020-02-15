@@ -4,6 +4,6 @@
 export const baseUrl = "https://api.themoviedb.org/3/";
 export const imageBaseUrl = "https://image.tmdb.org/t/p/";
 export const carouselImageSize = "w185/";
-export const movieDetailsImageSize = "w300/";
-export const searchResultsImageSize = "w92/";
+export const movieDetailsImageSize = "w185/";
+export const searchResultsImageSize = "w154/";
 export const apiKey = "057284199444718faf6314cb69a872ab";
