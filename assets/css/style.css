@@ -94,7 +94,7 @@ header {
 }
 
 .now-playing-item, .coming-soon-item {
-    text-align: center;
+    text-align: center;outline: none;
 }
 
 .now-playing-item:hover, .coming-soon-item:hover {
