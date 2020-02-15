@@ -82,6 +82,10 @@ header {
     background-color: #0d0101;
 }
 
+#coming-soon-container {
+    padding-bottom: 22px;
+}
+
 .carousel-title {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
