@@ -45,18 +45,20 @@ function writeMovieList(data){
             const rating = result.vote_count > 0 ? stars.join("") : `<span>Not rated yet</span>`;
 
                 const year = result.release_date.slice(0,4);
-                    return `<li class="search-item">
-                                <a href="${"movie-details.html".concat("?",result.id)}">
+                    return `<div class="col-sm-6 col-md-4 col-lg-3 search-item-wrapper">
+                                <div class="search-item">
+                                    <a href="${"movie-details.html".concat("?",result.id)}">
                                     <img src="${imageBaseUrl.concat(searchResultsImageSize, result.poster_path)}">
-                                </a>
+                                    </a>
                                 <div class="search-item-details">
                                     <a href="${"movie-details.html".concat("?",result.id)}">
-                                        ${result.title}
+                                       ${result.title}
                                     </a>
                                     <span>(${year})</span>
                                 </div>
                                 <div class="rating">${rating}</div> 
-                            </li>`;
+                                </div>
+                            </div>`;
                 }
         )
         el.html(list);

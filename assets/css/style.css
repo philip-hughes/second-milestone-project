@@ -143,32 +143,60 @@ header {
 /***************Search results****************/
 
 #list-container {
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.search-item-wrapper {
+    padding-bottom: 20px;
 }
 
 .search-item {
-     list-style: none;
-     margin-bottom: 10px;
+    list-style: none;
+    width: 185px;
+    position: relative;
+    margin:0 auto;
     font-family: 'Montserrat', sans-serif;
- }
-
-.search-item img {
-   min-height: 147px;
-   min-width: 98px;
-
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
-.search-item-details {
-    display: inline-block;
+/* Add more shadow on hover */
+.search-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.search-item img {
+   height: 278px;
+    width: 185px;
 }
 
 .search-item-details a {
     text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 130px;
+    padding-left: 4px;
 }
 
+.search-item-details {
+    height: 21px;
+}
+
+.search-item-details span {
+    vertical-align: top;
+}
+
+.rating {
+    padding-left: 4px;
+}
 .rating i {
     color: gold;
 }
+
 
 /***************Movie details****************/
 
