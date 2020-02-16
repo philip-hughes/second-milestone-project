@@ -180,6 +180,8 @@ header {
     text-overflow: ellipsis;
     max-width: 130px;
     padding-left: 4px;
+    font-weight: 500;
+    color: #212529;
 }
 
 .search-item-details {
@@ -216,8 +218,6 @@ header {
     min-height: 80px;
     margin-top: 10px;
     margin-bottom: 40px;
-
-
 }
 
 #rating-container span{
