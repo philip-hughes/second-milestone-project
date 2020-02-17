@@ -147,6 +147,10 @@ header {
     padding-right: 45px;
 }
 
+#list-container h3 {
+    text-align: center;
+}
+
 .search-item-wrapper {
     padding-bottom: 20px;
 }
@@ -197,6 +201,7 @@ header {
 .rating i {
     color: gold;
 }
+
 
 
 /***************Movie details****************/
