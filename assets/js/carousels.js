@@ -3,44 +3,33 @@
  */
 
 import {apiKey, baseUrl, imageBaseUrl, carouselImageSize} from './config.js';
-
+import {getApi} from './sharedFunctions.js';
 const nowPlayingUrl = "".concat(baseUrl, "movie/now_playing?api_key=",apiKey );
 const comingSoonUrl = "".concat(baseUrl, "movie/upcoming?api_key=", apiKey,"&language=en-US&page=1&region=GB");
 
 initCarousels();
 
 async function initCarousels(){
-    const nowPlayingResponse =  await getNowPlaying(nowPlayingUrl);
-    const comingSoonResponse =  await getComingSoon(comingSoonUrl);
-    const nowPlayingBody = await nowPlayingResponse.json();
-    const comingSoonBody = await comingSoonResponse.json();
+    const nowPlayingBody =  await getApi(nowPlayingUrl);
+    const comingSoonBody =  await getApi(comingSoonUrl);
     writeNowPlaying(nowPlayingBody);
     writeComingSoon(comingSoonBody);
 }
 
-async function getNowPlaying(url){
-    const data = await fetch(url);
-    return data;
-};
-
-async function getComingSoon(url){
-    const data = await fetch(url);
-    return data;
-};
 
 function writeNowPlaying(data){
-        const results = data.results;
-        const el = $('#now-playing-carousel');
-        const items = results.map(result => {
-                return `<div class="now-playing-item">
+    const results = data.results;
+    const el = $('#now-playing-carousel');
+    const items = results.map(result => {
+            return `<div class="now-playing-item">
                             <a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
                                 <img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
                              </a>                            
                         </div>
                     `;
-            }
-        );
-        el.append(items);
+        }
+    );
+    el.append(items);
     $(document).ready(function(){
         el.slick({
             infinite: true,
@@ -83,18 +72,18 @@ function writeNowPlaying(data){
 }
 
 function writeComingSoon(data){
-        const results = data.results;
-        const el = $('#coming-soon-carousel');
-        const items = results.map(result => {
-                return `<div class="coming-soon-item">
+    const results = data.results;
+    const el = $('#coming-soon-carousel');
+    const items = results.map(result => {
+            return `<div class="coming-soon-item">
                             <a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
                                 <img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
                              </a>                            
                         </div>
                     `;
-            }
-        );
-        el.append(items);
+        }
+    );
+    el.append(items);
     $(document).ready(function(){
         el.slick({
             infinite: true,
