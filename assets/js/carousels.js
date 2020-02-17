@@ -12,13 +12,9 @@ initCarousels();
 async function initCarousels(){
     const nowPlayingBody =  await getApi(nowPlayingUrl);
     const comingSoonBody =  await getApi(comingSoonUrl);
-  /*  writeNowPlaying(nowPlayingBody);
-    writeComingSoon(comingSoonBody);*/
     writeCarousel(nowPlayingBody,nowPlayingParams);
-    writeCarousel(comingSoonBody,comingSoonParams)
-
+    writeCarousel(comingSoonBody,comingSoonParams);
 }
-
 
 function writeCarousel(data, params){
     const results = data.results;
