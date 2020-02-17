@@ -207,6 +207,11 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
+#poster img {
+    width: 100%;
+    height: 95%;
+}
+
 #director span, #cast span, #runtime span, #release-date span {
     font-weight: bold;
 }

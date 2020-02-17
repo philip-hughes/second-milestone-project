@@ -32,7 +32,7 @@ function writeMovieDetails(data){
         const date = getDateString(data.release_date);
 
         var el = $("#poster");
-        el.append(`<img src="${imageBaseUrl.concat(movieDetailsImageSize,data.poster_path)}">`);
+        el.append(`<img src="${imageBaseUrl.concat(movieDetailsImageSize,data.backdrop_path)}">`);
         var el = $("#movie-title");
         el.append(`<h4>${data.title}</h4>`);
         var el = $("#movie-overview");
