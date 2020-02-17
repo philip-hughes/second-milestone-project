@@ -36,5 +36,8 @@ function writeMovieDetails(data){
         el.append(`<h4>${data.title}</h4>`);
         var el = $("#movie-overview");
         el.append(`<p>${data.overview}</p>`);
+        var el = $("#runtime");
+        el.append(`${data.runtime.toString().concat("mins")}`);
+
     })
 };
