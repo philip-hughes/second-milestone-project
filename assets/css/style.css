@@ -7,7 +7,6 @@ header {
     color: #fff;
     background-color: #e3b91e;
     /*70232a or efef0e or 233870 or #131307*/
-
 }
 
 #home-link {
@@ -121,10 +120,10 @@ header {
 }
 
 .arrow-box-left {
-    left: 50px;
+    left: 5px;
 }
 .arrow-box-right{
-    right: 50px;
+    right: 5px;
 }
 
 .np-next, .np-prev, .cs-next, .cs-prev  {
