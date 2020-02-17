@@ -3,7 +3,7 @@
  */
 
 import {apiKey, baseUrl, imageBaseUrl, movieDetailsImageSize} from './config.js';
-import {getApi} from './sharedFunctions.js';
+import {getApi, getDateString} from './sharedFunctions.js';
 
 const movieId = window.location.href.split('?').pop();
 const movieDetailsUrl = baseUrl.concat("movie/", movieId, "?api_key=", apiKey, "&language=en-US");
@@ -25,11 +25,12 @@ function writeCredits(){
         })
         $("#cast").append(`${castNames.join(", ")}`);
     })
-
 }
 
 function writeMovieDetails(data){
     data.then(data => {
+        const date = getDateString(data.release_date);
+
         var el = $("#poster");
         el.append(`<img src="${imageBaseUrl.concat(movieDetailsImageSize,data.poster_path)}">`);
         var el = $("#movie-title");
@@ -38,6 +39,9 @@ function writeMovieDetails(data){
         el.append(`<p>${data.overview}</p>`);
         var el = $("#runtime");
         el.append(`${data.runtime.toString().concat("mins")}`);
+        var el = $("#release-date");
+        el.append(date);
+
 
     })
 };

@@ -207,7 +207,7 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
-#director span, #cast span, #runtime span {
+#director span, #cast span, #runtime span, #release-date span {
     font-weight: bold;
 }
 
