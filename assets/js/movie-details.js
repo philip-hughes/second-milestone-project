@@ -30,9 +30,10 @@ function writeCredits(){
 function writeMovieDetails(data){
     data.then(data => {
         const date = getDateString(data.release_date);
+        const poster = data.backdrop_path != null ? imageBaseUrl.concat(movieDetailsImageSize,data.backdrop_path) : "assets/imgs/default-movie.png";
 
         var el = $("#poster");
-        el.append(`<img src="${imageBaseUrl.concat(movieDetailsImageSize,data.backdrop_path)}">`);
+        el.append(`<img src="${poster}">`);
         var el = $("#movie-title");
         el.append(`<h4>${data.title}</h4>`);
         var el = $("#movie-overview");
