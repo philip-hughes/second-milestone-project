@@ -19,10 +19,12 @@ async function initCarousels(){
 function writeCarousel(data, params){
     const results = data.results;
     const el = params.el;
+
     const items = results.map(result => {
+        const poster = result.poster_path != null ? imageBaseUrl.concat(carouselImageSize,result.poster_path) : "assets/imgs/default-movie.png";
             return `<div class=${params.className}>
                             <a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
-                                <img src="${imageBaseUrl.concat(carouselImageSize,result.poster_path)}">
+                                <img src=${poster}>
                              </a>                            
                         </div>
                     `;

@@ -96,6 +96,11 @@ header {
     outline: none;
 }
 
+.carousel-item-link img {
+    height: 278px;
+    width: 185px;
+}
+
 .now-playing-item, .coming-soon-item {
     text-align: center;outline: none;
 }
