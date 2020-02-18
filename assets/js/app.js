@@ -7,7 +7,6 @@
     2. Redirects to the search-results page.
     3. Clears the search box.
  */
-
 function search(){
     const searchTerm = $("#searchbox").val();
     if (searchTerm !== ""){
@@ -16,3 +15,12 @@ function search(){
         $("#searchbox").val("");
     }
 };
+
+$(document).ready(function(){
+    $("#searchbox").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#search-button").click();
+        }
+    });
+});
+
