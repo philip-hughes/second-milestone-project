@@ -259,7 +259,9 @@ header {
 }
 
 #rating-container p{
-
+    position: absolute;
+    top: 24px;
+    left: 10px;
     display: inline-block;
     color: white;
     font-size: 20px;
