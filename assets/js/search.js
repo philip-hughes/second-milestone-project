@@ -20,21 +20,12 @@ function writeMovieList(data){
 
         if(data.total_results > 0){
             const list = results.map(result => {
-                    const score = result.vote_average;
-                    var starClasses = [];
-                    if(score < 1){
-                        starClasses = ['far', 'far', 'far', 'far', 'far'];
-                    } else if(score < 3){
-                        starClasses = ['fas', 'far', 'far', 'far', 'far'];
-                    } else if(score < 5){
-                        starClasses = ['fas', 'fas', 'far', 'far', 'far'];
-                    } else if(score < 7){
-                        starClasses = ['fas', 'fas', 'fas', 'far', 'far'];
-                    } else if(score < 9){
-                        starClasses = ['fas', 'fas', 'fas', 'fas', 'far'];
-                    } else {
-                        starClasses = ['fas', 'fas', 'fas', 'fas', 'fas'];
+                    const score = Math.round((result.vote_average)/2);
+                    var starClasses = ['far', 'far', 'far', 'far', 'far'];
+                    if(score >= 1){
+                        starClasses = starClasses.fill('fas', 0, score);
                     }
+
                     const stars = starClasses.map(item => {
                         return `<i class="${item} fa-star"></i>`
                     });
