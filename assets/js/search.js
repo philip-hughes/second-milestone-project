@@ -3,7 +3,7 @@
  */
 
 import {apiKey, baseUrl, imageBaseUrl, searchResultsImageSize} from './config.js';
-import {getApi} from './sharedFunctions.js';
+import {getApi, getRating} from './sharedFunctions.js';
 
 const searchTerm = window.location.href.split('?').pop();
     if (searchTerm !== ""){
@@ -20,17 +20,7 @@ function writeMovieList(data){
 
         if(data.total_results > 0){
             const list = results.map(result => {
-                    const score = Math.round((result.vote_average)/2);
-                    var starClasses = ['far', 'far', 'far', 'far', 'far'];
-                    if(score >= 1){
-                        starClasses = starClasses.fill('fas', 0, score);
-                    }
-
-                    const stars = starClasses.map(item => {
-                        return `<i class="${item} fa-star"></i>`
-                    });
-                    const rating = result.vote_count > 0 ? stars.join("") : `<span>Not rated yet</span>`;
-
+                    const rating = getRating(result.vote_average, result.vote_count);
                     const year = result.release_date.slice(0,4);
                     const poster = result.poster_path != null ? imageBaseUrl.concat(searchResultsImageSize,result.poster_path) : "assets/imgs/default-movie.png";
                     return `<div class="col-sm-6 col-md-4 col-lg-3 search-item-wrapper">

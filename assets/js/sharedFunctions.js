@@ -13,6 +13,18 @@ export function getDateString(releaseDate){
     var day = moment(releaseDate).format('DD');
 
     return monthName.concat(" ").concat(day).concat(", ").concat(year);
+}
 
+export function getRating(voteAverage, voteCount){
+    const score = Math.round((voteAverage)/2);
+    var starClasses = ['far', 'far', 'far', 'far', 'far'];
+    if(score >= 1){
+        starClasses = starClasses.fill('fas', 0, score);
+    }
+    const stars = starClasses.map(item => {
+        return `<i class="${item} fa-star"></i>`
+    });
+    const rating = voteCount > 0 ? stars.join("") : `<span>Not rated yet</span>`;
+    return rating;
 
 }

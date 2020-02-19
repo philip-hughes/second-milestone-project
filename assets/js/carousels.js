@@ -3,7 +3,7 @@
  */
 
 import {apiKey, baseUrl, imageBaseUrl, carouselImageSize, nowPlayingParams, comingSoonParams} from './config.js';
-import {getApi} from './sharedFunctions.js';
+import {getApi, getRating} from './sharedFunctions.js';
 const nowPlayingUrl = "".concat(baseUrl, "movie/now_playing?api_key=",apiKey );
 const comingSoonUrl = "".concat(baseUrl, "movie/upcoming?api_key=", apiKey,"&language=en-US&page=1&region=GB");
 
@@ -21,10 +21,12 @@ function writeCarousel(data, params){
     const el = params.el;
 
     const items = results.map(result => {
+        const rating = getRating(result.vote_average, result.vote_count);
         const poster = result.poster_path != null ? imageBaseUrl.concat(carouselImageSize,result.poster_path) : "assets/imgs/default-movie.png";
             return `<div class=${params.className}>
                             <a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
                                 <img src=${poster}>
+                                <div class="rating">${rating}</div> 
                              </a>                            
                         </div>
                     `;
