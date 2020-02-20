@@ -5,7 +5,7 @@
 import {apiKey, baseUrl, imageBaseUrl, movieDetailsImageSize} from './config.js';
 import {getApi, getDateString} from './sharedFunctions.js';
 
-const movieId = window.location.href.split('?').pop();
+const movieId = window.location.href.split('?query=').pop();
 const movieDetailsUrl = baseUrl.concat("movie/", movieId, "?api_key=", apiKey, "&language=en-US");
 const creditsUrl = baseUrl.concat("movie/", movieId, "/credits?api_key=", apiKey, "&language=en-US");
 const movieDetailsData = getApi(movieDetailsUrl);
@@ -30,7 +30,7 @@ function writeCredits(){
 function writeMovieDetails(data){
     data.then(data => {
         const date = getDateString(data.release_date);
-        const poster = data.backdrop_path != null ? imageBaseUrl.concat(movieDetailsImageSize,data.backdrop_path) : "assets/imgs/default-movie.png";
+        const poster = data.backdrop_path != null ? imageBaseUrl.concat(movieDetailsImageSize,data.backdrop_path) : "assets/imgs/default-movie2.png";
 
         var el = $("#poster");
         el.append(`<img src="${poster}">`);

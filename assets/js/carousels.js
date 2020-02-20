@@ -24,7 +24,7 @@ function writeCarousel(data, params){
         const rating = getRating(result.vote_average, result.vote_count);
         const poster = result.poster_path != null ? imageBaseUrl.concat(carouselImageSize,result.poster_path) : "assets/imgs/default-movie.png";
             return `<div class=${params.className}>
-                            <a class="carousel-item-link" href="${"movie-details.html".concat("?",result.id)}">
+                            <a class="carousel-item-link" href="${"movie-details.html".concat("?query=",result.id)}">
                                 <img src=${poster}>
                                 <div class="rating">${rating}</div> 
                              </a>                            

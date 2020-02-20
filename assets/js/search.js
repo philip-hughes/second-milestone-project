@@ -5,9 +5,9 @@
 import {apiKey, baseUrl, imageBaseUrl, searchResultsImageSize} from './config.js';
 import {getApi, getRating} from './sharedFunctions.js';
 
-const searchTerm = window.location.href.split('?').pop();
+const searchTerm = window.location.href.split('?query=').pop();
     if (searchTerm !== ""){
-        const movieUrl = "".concat(baseUrl, "search/movie?api_key=", apiKey, '&query=', searchTerm);
+        const movieUrl = "".concat(baseUrl, "search/movie?api_key=", apiKey, '?query=', searchTerm);
         const movieData = getApi(movieUrl);
 
         writeMovieList(movieData);
@@ -25,7 +25,7 @@ function writeMovieList(data){
                     const poster = result.poster_path != null ? imageBaseUrl.concat(searchResultsImageSize,result.poster_path) : "assets/imgs/default-movie.png";
                     return `<div class="col-sm-6 col-md-4 col-lg-3 search-item-wrapper">
                                 <div class="search-item">
-                                    <a href="${"movie-details.html".concat("?",result.id)}">
+                                    <a href="${"movie-details.html".concat("?query=",result.id)}">
                                     <img src="${poster}">
                                     </a>
                                 <div class="search-item-details">
