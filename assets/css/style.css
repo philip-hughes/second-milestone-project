@@ -283,6 +283,12 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
+@media(max-width: 402px){
+    #rating-container p{
+        top: 10px;
+    }
+}
+
 #rate i {
     font-size: 20px;
 }
