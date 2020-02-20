@@ -101,6 +101,12 @@ header {
     width: 185px;
 }
 
+.carousel-item-link div {
+    display: inline-block;
+    width: 185px;
+    padding: 0px;
+}
+
 .now-playing-item, .coming-soon-item {
     text-align: center;outline: none;
 }
