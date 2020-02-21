@@ -237,6 +237,10 @@ header {
     max-height: 359px;
 }
 
+#movie-title {
+    padding-top: 10px;
+}
+
 #director span, #cast span, #runtime span, #release-date span, #movie-rating span {
     font-weight: bold;
 }
