@@ -47,7 +47,7 @@ async function getSessionIdData(){
     return sessionIdData.json();
 };
 
-$("i").hover(
+$(".fa-star").hover(
     function(){
         $(this).addClass("hover-yellow");
         $(this).prevAll().addClass("hover-yellow");
@@ -57,7 +57,7 @@ $("i").hover(
         $(this).prevAll().removeClass("hover-yellow");
     });
 
-$("i").click(function(){
+$(".fa-star").click(function(){
     if(($(this).hasClass("score"))){
         $(this).removeClass("score selected-yellow");
         $(this).prev().addClass("score");
