@@ -73,9 +73,13 @@ header {
 
 /***************Carousels****************/
 
+.content-wrapper {
+    background-color: #0d0101;
+}
+
 #now-playing-container, #coming-soon-container {
     position: relative;
-    background-color: #0d0101;
+
 }
 
 #coming-soon-container {
