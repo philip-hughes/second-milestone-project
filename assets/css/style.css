@@ -76,7 +76,7 @@ header {
 
 .content-wrapper {
     background-color: #0d0101;
-    min-height: 948px;
+    min-height: calc(100vh - 180px); /*180px = header + footer height*/
 }
 
 #now-playing-container, #coming-soon-container {
