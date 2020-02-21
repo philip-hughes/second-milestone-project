@@ -235,6 +235,10 @@ header {
     font-weight: bold;
 }
 
+#movie-rating i {
+    color: gold;
+}
+
 #rating-container {
     position: relative;
     /*background-color: #534bae;*/
