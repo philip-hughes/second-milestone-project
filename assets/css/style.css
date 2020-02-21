@@ -199,7 +199,7 @@ header {
     max-width: 130px;
     padding-left: 4px;
     font-weight: 500;
-    color: #212529;
+    color: #e9ecef;
 }
 
 .search-item-details {
@@ -208,6 +208,7 @@ header {
 
 .search-item-details span {
     vertical-align: top;
+    color: #e9ecef;
 }
 
 .rating {
