@@ -24,10 +24,13 @@ function writeCarousel(data, params){
         const rating = getRating(result.vote_average, result.vote_count);
         const poster = result.poster_path != null ? imageBaseUrl.concat(carouselImageSize,result.poster_path) : "assets/images/default-movie.png";
             return `<div class=${params.className}>
-                            <a class="carousel-item-link" href="${"movie-details.html".concat("?query=",result.id)}">
-                                <img src=${poster}>
-                                <div class="rating">${rating}</div> 
-                             </a>                            
+                            <div class="carousel-link-wrapper">
+                                <a class="carousel-item-link" href="${"movie-details.html".concat("?query=",result.id)}">
+                                    <img src=${poster}>
+                                    <div class="rating">${rating}</div> 
+                                </a>  
+                            </div>
+                          
                         </div>
                     `;
         }
@@ -42,23 +45,30 @@ function writeCarousel(data, params){
             prevArrow: params.prevArrow,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1540,
                     settings: {
                         slidesToShow: 4,
                         slidesToScroll: 2
                     }
                 },
                 {
-                    breakpoint: 800,
+                    breakpoint: 1180,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 2
                     }
                 },
                 {
-                    breakpoint: 620,
+                    breakpoint: 875,
                     settings: {
                         slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 620,
+                    settings: {
+                        slidesToShow: 1,
                         slidesToScroll: 1
                     }
                 },
