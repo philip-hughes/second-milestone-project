@@ -3,7 +3,7 @@
  */
 
 import {apiKey, baseUrl, imageBaseUrl, carouselImageSize, nowPlayingParams, comingSoonParams} from './config.js';
-import {getApi, getRating} from './sharedFunctions.js';
+import {getApi, getRating} from './shared-functions.js';
 const nowPlayingUrl = "".concat(baseUrl, "movie/now_playing?api_key=",apiKey );
 const comingSoonUrl = "".concat(baseUrl, "movie/upcoming?api_key=", apiKey,"&language=en-US&page=1&region=GB");
 

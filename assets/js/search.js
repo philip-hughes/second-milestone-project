@@ -3,7 +3,7 @@
  */
 
 import {apiKey, baseUrl, imageBaseUrl, searchResultsImageSize} from './config.js';
-import {getApi, getRating} from './sharedFunctions.js';
+import {getApi, getRating} from './shared-functions.js';
 
 const searchTerm = window.location.href.split('?query=').pop();
     if (searchTerm !== ""){
