@@ -4,7 +4,7 @@
 import {apiKey, baseUrl} from './config.js';
 
 const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_key=", apiKey);
-const movieId = window.location.href.split('?').pop();
+const movieId = window.location.href.split('?query=').pop();
 
 async function submitRating(){
     const rating = $(".score").attr("value");

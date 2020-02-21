@@ -3,7 +3,7 @@
  */
 
 import {apiKey, baseUrl, imageBaseUrl, movieDetailsImageSize} from './config.js';
-import {getApi, getDateString} from './sharedFunctions.js';
+import {getApi, getDateString, getRating} from './sharedFunctions.js';
 
 const movieId = window.location.href.split('?query=').pop();
 const movieDetailsUrl = baseUrl.concat("movie/", movieId, "?api_key=", apiKey, "&language=en-US");
@@ -31,7 +31,7 @@ function writeMovieDetails(data){
     data.then(data => {
         const date = getDateString(data.release_date);
         const poster = data.backdrop_path != null ? imageBaseUrl.concat(movieDetailsImageSize,data.backdrop_path) : "assets/imgs/default-movie2.png";
-
+        const rating = getRating(data.vote_average, data.vote_count);
         var el = $("#poster");
         el.append(`<img src="${poster}">`);
         var el = $("#movie-title");
@@ -42,6 +42,8 @@ function writeMovieDetails(data){
         el.append(`${data.runtime.toString().concat("mins")}`);
         var el = $("#release-date");
         el.append(date);
+        var el = $("#movie-rating");
+        el.append(rating);
 
 
     })

@@ -7,7 +7,7 @@ import {getApi, getRating} from './sharedFunctions.js';
 
 const searchTerm = window.location.href.split('?query=').pop();
     if (searchTerm !== ""){
-        const movieUrl = "".concat(baseUrl, "search/movie?api_key=", apiKey, '?query=', searchTerm);
+        const movieUrl = "".concat(baseUrl, "search/movie?api_key=", apiKey, '&query=', searchTerm);
         const movieData = getApi(movieUrl);
 
         writeMovieList(movieData);
