@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Coda+Caption:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700');
 
+
 /***************Header****************/
 header {
     height: 60px;
@@ -75,6 +76,7 @@ header {
 
 .content-wrapper {
     background-color: #0d0101;
+    min-height: 948px;
 }
 
 #now-playing-container, #coming-soon-container {
@@ -101,8 +103,8 @@ header {
 }
 
 .carousel-item-link img {
-    height: 278px;
-    width: 185px;
+    height: 378px;
+    width: 285px;
 }
 
 .carousel-item-link div {
@@ -332,14 +334,15 @@ header {
 /***************Footer****************/
 
 footer {
-    /*  position: fixed;
-      width: 100%;
-      bottom: 0;
-      z-index: 2;*/
+    /* position: fixed;
+       width: 100%;
+       bottom: 0;
+       z-index: 2;
+      */
     height: 120px;
-    color: #fff;
-    background-color: #e3b91e;
-  /*  background-color: #efef0e; */
+     color: #fff;
+     background-color: #e3b91e;
+   /*  background-color: #efef0e; */
     font-family: 'Montserrat', sans-serif;
 }
 
