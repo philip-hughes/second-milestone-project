@@ -97,7 +97,10 @@ header {
     text-transform: uppercase;
 }
 
-
+.carousel-link-wrapper {
+    max-width: 285px;
+    margin: 0 auto;
+}
 .carousel-item-link:focus {
     outline: none;
 }
@@ -105,12 +108,6 @@ header {
 .carousel-item-link img {
     height: 378px;
     width: 285px;
-}
-
-.carousel-item-link div {
-    display: inline-block;
-    width: 185px;
-    padding: 0px;
 }
 
 .now-playing-item, .coming-soon-item {
