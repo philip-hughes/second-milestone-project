@@ -172,7 +172,7 @@ header {
 
 .search-item {
     list-style: none;
-    width: 285px;
+    width: 270px;
     position: relative;
     margin:0 auto;
     font-family: 'Montserrat', sans-serif;
@@ -186,8 +186,8 @@ header {
 }
 
 .search-item img {
-    height: 378px;
-    width: 285px;
+    height: 363px;
+    width: 270px;
 }
 
 .search-item-details a {
