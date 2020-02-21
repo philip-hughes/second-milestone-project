@@ -22,7 +22,7 @@ function writeMovieList(data){
             const list = results.map(result => {
                     const rating = getRating(result.vote_average, result.vote_count);
                     const year = result.release_date.slice(0,4);
-                    const poster = result.poster_path != null ? imageBaseUrl.concat(searchResultsImageSize,result.poster_path) : "assets/imgs/default-movie.png";
+                    const poster = result.poster_path != null ? imageBaseUrl.concat(searchResultsImageSize,result.poster_path) : "assets/images/default-movie.png";
                     return `<div class="col-sm-6 col-md-4 col-lg-3 search-item-wrapper">
                                 <div class="search-item">
                                     <a href="${"movie-details.html".concat("?query=",result.id)}">
