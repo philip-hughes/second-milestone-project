@@ -16,18 +16,17 @@ header {
 
 .home-icon {
     position: absolute;
-    top: 16px;
-    font-size: 30px;
+    top: 9px;
+    font-size: 40px;
     padding-left: 15px;
     color: white;
-    /* color: #ffd600;*/
 }
 
 
 #title {
     position: absolute;
-    left: 44px;
-    color: #3f051a; /*bdadad*/
+    left: 48px;
+    color: #3f051a;
     text-align: center;
     font-family: 'Coda Caption', sans-serif;
     font-size: 25px;
@@ -66,12 +65,13 @@ header {
 
 @media(max-width:410px) {
     .home-icon {
-        font-size: 25px;
-        padding-left: 15px;
+        top: 12px;
+        font-size: 36px;
+        padding-left: 10px;
     }
     #title {
+        left: 36px;
         font-size: 20px;
-        padding-left: 5px;
     }
 }
 
@@ -253,7 +253,6 @@ header {
 
 #rating-container {
     position: relative;
-    /*background-color: #534bae;*/
     background-color: #393651;
     min-height: 80px;
     margin-top: 10px;
@@ -338,15 +337,9 @@ header {
 /***************Footer****************/
 
 footer {
-    /* position: fixed;
-       width: 100%;
-       bottom: 0;
-       z-index: 2;
-      */
     height: 120px;
-     color: #fff;
-     background-color: #e3b91e;
-   /*  background-color: #efef0e; */
+    color: #fff;
+    background-color: #e3b91e;
     font-family: 'Montserrat', sans-serif;
 }
 
