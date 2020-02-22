@@ -22,7 +22,9 @@ function writeCarousel(data, params){
 
     const items = results.map(result => {
         const rating = getRating(result.vote_average, result.vote_count);
-        const poster = result.poster_path != null ? imageBaseUrl.concat(carouselImageSize,result.poster_path) : "assets/images/default-movie.png";
+
+        if(result.poster_path != null){
+            const poster =  imageBaseUrl.concat(carouselImageSize,result.poster_path);
             return `<div class=${params.className}>
                             <div class="carousel-link-wrapper">
                                 <a class="carousel-item-link" href="${"movie-details.html".concat("?query=",result.id)}">
@@ -31,9 +33,10 @@ function writeCarousel(data, params){
                                 </a>  
                             </div>
                           
-                        </div>
-                    `;
+                        </div>`;
+            }
         }
+
     );
     el.append(items);
     $(document).ready(function(){
