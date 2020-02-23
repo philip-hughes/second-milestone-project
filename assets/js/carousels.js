@@ -74,13 +74,6 @@ function writeCarousel(data, params){
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
-                },
-                {
-                    breakpoint: 420,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
                 }
             ]
         });
