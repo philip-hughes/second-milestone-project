@@ -1,13 +1,40 @@
 # Second milestone project - "Silver Screen movie rating website"
 
-This project website is for a fictional gym named Uplift Training Center.  The site provides prospective gym clients with the basic information they might want
-when considering joining a gym. i.e. classes, open hours, contact information and price plans.  The site is comprised of 3 static webpages and can be viewed in desktop, tablet and
-mobile devices.
+This project website is a movie search and rate website named Silver Screen.  The primary purpose of the site is to show users a list of movies that are
+currently playing in theatres, or movies that are coming soon. In addition to this, the user can click on a movie, which will redirect them to the
+movie-details screen, where they are presented with additional movie info, and an option to submit a rating for the movie. Users can also search for any
+movie using the search box in the nav bar. Any movies matching the search term will be displayed on the search-results screen with the name, year of release,
+movie rating, and the movie poster.
+The site is comprised of 3 webpages and can be viewed in desktop, tablet and mobile devices.
 
 
 ## UX
 
-The UX design for this project was mainly influenced by the gym websites fitnessfactorymaine.com and burnpilates.com.  The idea was to produce a concise, 3 page site that presented the user with the basic information they would want when considering joining a gym. After laying the foundation of the site, the final design and implementation was reached essentially via trial and error until i found a layout that provided a simple look and feel and ease of use across all screensizes.
+The purpose of this site is to provide users with a way to check what movies are currently showing in theatres, to view basic movie details, and to submit
+a rating for the movie if they wish.
+
+At the beginning of the project I listed what features were a must for the site, and features that were nice to have. The core features i wanted were 1.
+A ist of 'In Theatres' movies. 2. A movie search option 3. A 'submit a rating' option.  The rate option was the main factor in my decision to the use The Movie Database API, as it
+was the only API i could find that had this service available.
+
+I had also considered displaying movie reviews on the movie-details screen but decided against it for the following reasons 1. The GET Reviews service in the
+API I chose is a bit flakey, and many of the movies dont have reviews, or very few. 2. In my experience I generally don't read user reviews when deciding on a
+movie i want to see.  My decision is usually based on the director, cast, running time and how highly the movie is rated.
+
+After selecting the API I wrote some basic proof of concept code to verify the API was giving me what i wanted, and that there were no major issues with it. I then
+went about designing the basic layout of the site, and writing the wireframes. The use of a carousel on the home page was a suggestion from my mentor during our
+first project. I'd considered a carousel on the search-results screen also, but decided against it as 1. If there are many results returned its easier
+to find what you're looking for in a list as opposed to a carousel. 2. I wanted there to be a clear distinction in layout
+on each screen, partly for variety, and also so that a user knows exactly where they are on the site. Note that the search-results page in the wireframes show a scrollable list
+of movies.  I changed this to a grid of cards after a suggestion from my project mentor during our second meeting.
+
+Note also that there is a minor issue with the movies returned by the GET Upcoming API call.  Many of the movies in this response have release dates that are in the past, which obviously isn't what
+you'd expect for a Coming Soon movie.  I had considered filtering these movies out of the carousel, but I discussed it my mentor and we agreed that i should leave it as is for the following reasons
+ 1. In some cases the filtered list could be very small or result in no 'Coming Soon movies' at all.  2. In a real life project this issue would be resolved
+in the backend rather than the UI.
+
+Wireframes can be found in root directory of the project repository.
+
 
 
 ## Features
@@ -30,6 +57,7 @@ The UX design for this project was mainly influenced by the gym websites fitness
                         choose at least 1 star. The confirmation message will either confirm the rating submission or inform the user that they have already
                         rated that particular movie.  The rating is submitted using the POST Rate Movie API call which takes the guest session id and rating value
                         as paramaters.
+
 
 ## Technologies Used
 
@@ -112,7 +140,7 @@ emulator).
 
 **Footer section**
 1. Scroll down to the footer section and click on each of the social media links. Verify that correct site is open in a new browser tab.
-2. Gradually reduce the screenwith from 1680 down to 320 and verify that the Follow Us text and icons remain centered and no overlapping occurs.
+2. Gradually reduce the screenwidth from 1680 down to 320 and verify that the Follow Us text and icons remain centered and no overlapping occurs.
 
 ## Deployment
 
@@ -139,6 +167,4 @@ is very easy and quick to install.  There are clear steps to install the Python 
 
 ### Acknowledgements
 
-- The classes timetable overlay that is displayed on hover was inpsired by the classes timetable on fitnessfactorymaine.com. However, no code was copied, and the implementation is not the same.
-- The general layout of the site was inspired by the gym websites fitnessfactorymaine.com and burnpilates.com.
-- The Hamburger menu's transparent dropdown was inspired by the dropdown at https://code-institute-solutions.github.io/StudentExampleProjectGradeFive/index.html
+- The box shadow
