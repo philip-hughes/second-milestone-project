@@ -1,13 +1,13 @@
 /**
  * Created by Phugh on 17/02/2020.
  */
-export async function getApi(url){
+export async function getApi(url) {
     const response = await fetch(url);
     const responseBody = await response.json();
     return responseBody;
 };
 
-export function getDateString(releaseDate){
+export function getDateString(releaseDate) {
     var monthName = moment(releaseDate).format('MMM');
     var year = moment(releaseDate).format('YYYY');
     var day = moment(releaseDate).format('DD');
@@ -15,10 +15,10 @@ export function getDateString(releaseDate){
     return monthName.concat(" ").concat(day).concat(", ").concat(year);
 }
 
-export function getRating(voteAverage, voteCount){
-    const score = Math.round((voteAverage)/2);
+export function getRating(voteAverage, voteCount) {
+    const score = Math.round((voteAverage) / 2);
     var starClasses = ['far', 'far', 'far', 'far', 'far'];
-    if(score >= 1){
+    if (score >= 1) {
         starClasses = starClasses.fill('fas', 0, score);
     }
     const stars = starClasses.map(item => {
