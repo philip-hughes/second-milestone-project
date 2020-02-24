@@ -22,8 +22,8 @@ function writeCredits(){
         const cast = data.cast.slice(0, 3);
         const castNames = cast.map(item => {
             return item.name;
-        })
-        $("#cast").append(`${castNames.join(", ")}`);
+        });
+        castNames.length > 0 ? $("#cast").append(`${castNames.join(", ")}`) : $("#cast").append("Not available");
     })
 }
 
