@@ -107,6 +107,11 @@ header {
     outline: none;
 }
 
+.carousel-item-link:hover {
+    text-decoration: none;
+}
+
+
 .carousel-item-link img {
     height: 378px;
     width: 285px;
@@ -214,7 +219,8 @@ header {
 }
 
 .rating {
-    padding-left: 4px;
+    padding-left: 4px;;
+    color: #e9ecef;
 }
 .rating i {
     color: gold;
@@ -346,7 +352,6 @@ footer {
 footer a {
     text-decoration: none;
     color: #fff;
-
 }
 
 footer h2 {
