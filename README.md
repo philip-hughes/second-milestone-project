@@ -40,20 +40,20 @@ Wire frames can be found in root directory of the project repository.
 ## Features
 
 ### Existing Features — All screens
-— **Home icon** — This is a font awesome icon displayed on the left of the header that links to the homepage when clicked
-— **Search bar** — An input box with placeholder text prompting users to Search Movies
-— **The Footer** — the footer section contains Follow Us text and social media links.
+- **Home icon** - This is a font awesome icon displayed on the left of the header that links to the homepage when clicked
+- **Search bar** - An input box with placeholder text prompting users to Search Movies
+- **The Footer** - the footer section contains Follow Us text and social media links.
 
 ### Existing Features — Home screen
-— **In Theaters carousel** — A Slick js carousel that displays movie posters and ratings returned from the Get Now Playing API call.
-— **Coming Soon carousel** — A Slick js carousel that displays movie posters from the Get Upcoming API call.
+- **In Theaters carousel** - A Slick js carousel that displays movie posters and ratings returned from the Get Now Playing API call.
+- **Coming Soon carousel** - A Slick js carousel that displays movie posters from the Get Upcoming API call.
 
 ### Existing Features — Search results screen
-— **Search results** — A grid of cards displaying the movie poster, movie rating, title and release year that are returned from the Get Search Movies API call.
+- **Search results** - A grid of cards displaying the movie poster, movie rating, title and release year that are returned from the Get Search Movies API call.
 
 ### Existing Features — Movie details screen
-— **Movie info and poster** — Movie info and poster retrieved from the Get Details and Get Credits API calls.
-— **Submit rating** — A component that allows users to submit a rating for the movie by selecting a number of stars and clicking the Submit button. The user must
+- **Movie info and poster** - Movie info and poster retrieved from the Get Details and Get Credits API calls.
+- **Submit rating** - A component that allows users to submit a rating for the movie by selecting a number of stars and clicking the Submit button. The user must
  choose at least 1 star. The confirmation message will either confirm the rating submission or inform the user that they have already
  rated that particular movie.  The rating is submitted using the POST Rate Movie API call which takes the guest session id and rating value
  as parameters.
