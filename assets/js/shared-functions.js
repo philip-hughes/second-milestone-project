@@ -24,7 +24,7 @@ export function getRating(voteAverage, voteCount){
     const stars = starClasses.map(item => {
         return `<i class="${item} fa-star"></i>`
     });
-    const rating = voteCount > 0 ? stars.join("") : `<span>Not rated yet</span>`;
+    const rating = voteCount > 0 ? stars.join("") : "Not rated yet";
     return rating;
 
 }
