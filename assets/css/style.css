@@ -62,7 +62,7 @@ header {
     top: 0;
 }
 
-@media(max-width:410px) {
+@media(max-width:420px) {
     .home-icon {
         top: 12px;
         font-size: 36px;
@@ -109,7 +109,6 @@ header {
 .carousel-item-link:hover {
     text-decoration: none;
 }
-
 
 .carousel-item-link img {
     height: 378px;
@@ -247,7 +246,6 @@ header {
     padding-top: 10px;
 }
 
-
 #movie-details > span > span{
     font-weight: bold;
 }
@@ -320,7 +318,7 @@ header {
     height: 30px;
     margin-left: 10px;
 }
-
+/*This is the default for the 'submit a rating stars*/
 .grey {
     color: grey;
 }
