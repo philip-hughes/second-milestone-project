@@ -7,8 +7,7 @@ const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_ke
 const movieId = window.location.href.split('?query=').pop();
 
 async function submitRating(){
-    const rating = $(".score").attr("value");
-   /* const ratingResponse = await postRating(rating, sessionId());*/
+    const rating = $(".score").attr("data-value");
     const id = await sessionId();
     const postRatingUrl = baseUrl.concat("movie/", movieId, "/rating?api_key=", apiKey, "&guest_session_id=", id );
     const ratingResponse = await fetch(postRatingUrl, {
