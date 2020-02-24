@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700');
 
 
-/***************Header****************/
+/*******************************Header************************/
 header {
     height: 60px;
     color: #fff;
     background-color: #e3b91e;
-    /*70232a or efef0e or 233870 or #131307*/
 }
 
 #home-link {
@@ -75,7 +74,7 @@ header {
     }
 }
 
-/***************Carousels****************/
+/*******************************Carousels*********************/
 
 .content-wrapper {
     background-color: #0d0101;
@@ -160,7 +159,7 @@ header {
     display: inline-block;
 }
 
-/***************Search results****************/
+/*******************************Search results*******************/
 
 #list-container {
     padding-top: 20px;
@@ -187,7 +186,6 @@ header {
     transition: 0.3s;
 }
 
-/* Add more shadow on hover */
 .search-item:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -228,7 +226,7 @@ header {
 
 
 
-/***************Movie details****************/
+/*******************************Movie details*******************/
 
 #movie-wrapper {
     margin-top: 42px;
@@ -249,7 +247,8 @@ header {
     padding-top: 10px;
 }
 
-#director span, #cast span, #runtime span, #release-date span, #movie-rating span {
+
+#movie-details > span > span{
     font-weight: bold;
 }
 
