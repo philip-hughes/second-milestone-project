@@ -30,20 +30,21 @@ function writeCredits(){
 function writeMovieDetails(data){
     data.then(data => {
         const date = getDateString(data.release_date);
+        const runtime = data.runtime != 0 || null ? data.runtime.toString().concat("mins") : "Not available"
         const rating = getRating(data.vote_average, data.vote_count);
         let el = $("#poster");
         if(data.backdrop_path != null){
             el.append(`<img src="${imageBaseUrl.concat(movieDetailsImageSize,data.backdrop_path)}">`);
         }
-        el = $("#movie-title");
+        el = $("#movie-title")
         el.append(`<h4>${data.title}</h4>`);
         el = $("#movie-overview");
         el.append(`<p>${data.overview}</p>`);
         el = $("#runtime");
-        el.append(`${data.runtime.toString().concat("mins")}`);
+        el.append(runtime);
         el = $("#release-date");
         el.append(date);
         el = $("#movie-rating");
         el.append(rating);
-    })
+    });
 };
