@@ -7,14 +7,14 @@ import {
     baseUrl,
     imageBaseUrl,
     movieDetailsImageSize
-} from './config.js';
+} from "./config.js";
 import {
     getApi,
     getDateString,
     getRating
-} from './shared-functions.js';
+} from "./shared-functions.js";
 
-const movieId = window.location.href.split('?query=').pop();
+const movieId = window.location.href.split("?query=").pop();
 const movieDetailsUrl = baseUrl.concat("movie/", movieId, "?api_key=", apiKey, "&language=en-US");
 const creditsUrl = baseUrl.concat("movie/", movieId, "/credits?api_key=", apiKey, "&language=en-US");
 const movieDetailsData = getApi(movieDetailsUrl);
