@@ -9,13 +9,14 @@ import {
     carouselImageSize,
     nowPlayingParams,
     comingSoonParams
-} from './config.js';
+} from "./config.js";
 import {
     getApi,
     getRating
-} from './shared-functions.js';
-const nowPlayingUrl = "".concat(baseUrl, "movie/now_playing?api_key=", apiKey);
-const comingSoonUrl = "".concat(baseUrl, "movie/upcoming?api_key=", apiKey, "&language=en-US&page=1&region=GB");
+} from "./shared-functions.js";
+
+const nowPlayingUrl = baseUrl.concat("movie/now_playing?api_key=", apiKey);
+const comingSoonUrl = baseUrl.concat("movie/upcoming?api_key=", apiKey, "&language=en-US&page=1&region=GB");
 
 initCarousels();
 
@@ -39,14 +40,12 @@ function writeCarousel(data, params) {
                             <div class="carousel-link-wrapper">
                                 <a class="carousel-item-link" href="${"movie-details.html".concat("?query=",result.id)}">
                                     <img src=${poster}>
-                                    <div class="rating">${rating}</div> 
-                                </a>  
+                                    <div class="rating">${rating}</div>
+                                </a>
                             </div>
-                          
                         </div>`;
             }
         }
-
     );
     el.append(items);
     $(document).ready(function () {
