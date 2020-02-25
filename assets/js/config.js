@@ -9,14 +9,14 @@ export const searchResultsImageSize = "w342/";
 export const apiKey = "057284199444718faf6314cb69a872ab";
 
 export const nowPlayingParams = {
-    "el": $('#now-playing-carousel'),
+    "el": $("#now-playing-carousel"),
     "className": "now-playing-item",
     "nextArrow": $(".np-next"),
     "prevArrow": $(".np-prev")
 }
 
 export const comingSoonParams = {
-    "el": $('#coming-soon-carousel'),
+    "el": $("#coming-soon-carousel"),
     "className": "coming-soon-item",
     "nextArrow": $(".cs-next"),
     "prevArrow": $(".cs-prev")
