@@ -4,20 +4,20 @@
 import {
     apiKey,
     baseUrl
-} from './config.js';
+} from "./config.js";
 
 const guestSessionUrl = baseUrl.concat("/authentication/guest_session/new?api_key=", apiKey);
-const movieId = window.location.href.split('?query=').pop();
+const movieId = window.location.href.split("?query=").pop();
 
 async function submitRating() {
     const rating = $(".score").attr("data-value");
     const id = await sessionId();
     const postRatingUrl = baseUrl.concat("movie/", movieId, "/rating?api_key=", apiKey, "&guest_session_id=", id);
     const ratingResponse = await fetch(postRatingUrl, {
-        method: 'POST',
+        method: "POST",
         headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            "Accept": "application/json",
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             "value": rating
