@@ -11,7 +11,7 @@ function search() {
     const searchTerm = $("#searchbox").val();
     if (searchTerm !== "") {
         const searchUrl = "search-results.html".concat("?query=", searchTerm);
-        $(location).attr('href', searchUrl);
+        $(location).attr("href", searchUrl);
         $("#searchbox").val("");
     }
 };

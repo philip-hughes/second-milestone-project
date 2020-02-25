@@ -7,15 +7,15 @@ import {
     baseUrl,
     imageBaseUrl,
     searchResultsImageSize
-} from './config.js';
+} from "./config.js";
 import {
     getApi,
     getRating
-} from './shared-functions.js';
+} from "./shared-functions.js";
 
-const searchTerm = window.location.href.split('?query=').pop();
+const searchTerm = window.location.href.split("?query=").pop();
 if (searchTerm !== "") {
-    const movieUrl = "".concat(baseUrl, "search/movie?api_key=", apiKey, '&query=', searchTerm);
+    const movieUrl = baseUrl.concat("search/movie?api_key=", apiKey, "&query=", searchTerm);
     const movieData = getApi(movieUrl);
 
     writeMovieList(movieData);
@@ -24,7 +24,7 @@ if (searchTerm !== "") {
 function writeMovieList(data) {
     data.then(data => {
         const results = data.results;
-        const el = $('#movieList');
+        const el = $("#movieList");
 
         if (data.total_results > 0) {
             const list = results.map(result => {
@@ -42,13 +42,13 @@ function writeMovieList(data) {
                                     </a>
                                     <span>(${year})</span>
                                 </div>
-                                <div class="rating">${rating}</div> 
+                                <div class="rating">${rating}</div>
                                 </div>
                             </div>`;
             })
             el.html(list);
         } else {
-            $('#list-container').html(`<h3 id="no-results">No movies found. Refine your search term.</h3>`)
+            $("#list-container").html(`<h3 id="no-results">No movies found. Refine your search term.</h3>`)
         };
 
     })
