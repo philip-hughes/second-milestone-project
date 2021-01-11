@@ -148,15 +148,15 @@ emulator).
 ## Deployment
 
 This website was deployed to github pages with the following steps.  The version deployed on github pages is the final version.
-1. Go to the repository root directory at https://github.com/philiph80/second-milestone-project
+1. Go to the repository root directory at https://philip-hughes.github.io/second-milestone-project/
 2. Click on Settings and scroll down to the GitHub Pages section.
 3. Open the Source drop down menu and select 'master branch'. The Settings page will reload.
 4. Scroll back down to the GitHub Pages section and you should see a blue message stating that "Your site is ready to be published", followed by a link to the site.
 5. Wait a couple of minutes until the message turns green and the site is published.
-6. Click on the link and then append index.html to the URL to view the site. e.g. https://philiph80.github.io/second-milestone-project/index.html
+6. Click on the link and then append index.html to the URL to view the site. e.g. https://philip-hughes.github.io/second-milestone-project/index.html
 
 If you want to run the site locally you need to download the site files from Github and host it on a HTTP server.
-1. To download the site files, go to https://philiph80.github.io/second-milestone-project/, then click the Clone or Download button and select Download Zip.
+1. To download the site files, go to https://philip-hughes.github.io/second-milestone-project/, then click the Clone or Download button and select Download Zip.
 2. Extract the downloaded zip and run the index.html file from your HTTP server. If you dont already have a HTTP server installed I recommend you use the Python server which
 is very easy and quick to install.  There are clear steps to install the Python server available here — https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server
 
