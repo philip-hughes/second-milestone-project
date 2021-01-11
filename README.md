@@ -7,6 +7,8 @@ movie using the search box in the nav bar. Any movies matching the search term w
 movie rating, and the movie poster.
 The site comprises 3 web pages and can be viewed in desktop, tablet and mobile devices.
 
+The project is running at - https://philip-hughes.github.io/second-milestone-project/
+
 
 ## UX
 
